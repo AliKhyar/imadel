@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <script>
+        async function sendData() {
+            const dummyData = { message: "Hello, this is a test!" };
+
+            try {
+                const response = await fetch('http://localhost:3000/saveData', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dummyData)
+                });
+
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                console.error("Error sending data:", error);
+                alert("Error sending data.");
+            }
+        }
+
+        async function checkHealth() {
+            try {
+                const response = await fetch('http://localhost:3000/health');
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                console.error("Error checking health:", error);
+                alert("Error checking health.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Test API Endpoints</h1>
+    <button onclick="sendData()">Send Data</button>
+    <button onclick="checkHealth()">Check Health</button>
+</body>
+</html>
+

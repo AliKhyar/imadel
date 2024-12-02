@@ -1,0 +1,6 @@
+**/node_modules
+**/dist
+**/build
+**/imadel-api/node_modules
+**/imadel-api/dist
+**/imadel-api/build

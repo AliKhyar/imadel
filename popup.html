@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Title Reader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag -->
+  <style>
+    body { width: 200px; }
+  </style>
+  <!-- Include jQuery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Tab Title</h1>
+  <div id="title"></div>
+  <button id="screenshotButton">Take Screenshot</button> <!-- Added button for screenshot -->
+  <button id="csvButton">Download CSV</button> <!-- Added button for CSV download -->
+  <script src="popup.js"></script>
+  <script src="extract.js"></script> <!-- Ensure extract.js is loaded after jQuery -->
+</body>
+</html>
